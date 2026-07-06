@@ -10,7 +10,7 @@ export default function Projects() {
         <SectionHeading
           eyebrow="// featured projects"
           title="Selected work, end to end."
-          description="Each project below covers the full arc — architecture, what shipped, what broke, and what I'd do differently. Swap in your own via src/data/projects.json."
+          description="Each project below covers the full arc — architecture, what shipped, what broke, and what I'd do differently."
         />
 
         <div className="flex flex-col gap-10">
