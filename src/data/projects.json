@@ -1,0 +1,124 @@
+[
+  {
+    "id": "proj-seismic-detection",
+    "title": "Seismic Event Detection System",
+    "subtitle": "CNN + Transformer pipeline for earthquake detection & risk alerts",
+    "images": [
+      "/projects/seismic-1.jpg",
+      "/projects/seismic-2.jpg"
+    ],
+    "demoVideo": "",
+    "architectureDiagram": "/projects/seismic-architecture.png",
+    "githubUrl": "https://github.com/Roshh21/seismic-event-detection-system",
+    "liveUrl": "",
+    "techStack": ["PyTorch", "CNN", "Transformers", "STEAD Dataset", "Signal Processing"],
+    "keyFeatures": [
+      "Deep learning system combining CNN and Transformer architectures for earthquake detection, magnitude estimation and epicenter location prediction",
+      "Power Spectral Density (PSD) features integrated for enhanced frequency-domain analysis",
+      "Multi-stage pipeline over STEAD seismic waveform data for event classification, geolocation and risk-based alerting",
+      "Interactive dashboard for seismic monitoring and prediction analysis"
+    ],
+    "results": [
+      "Improved magnitude prediction accuracy through PSD-based frequency features",
+      "End-to-end pipeline covering detection, classification, geolocation and alerting"
+    ],
+    "challenges": [
+      "Extracting reliable frequency-domain signal from noisy real-world waveform data",
+      "Combining CNN and Transformer representations without losing localization precision"
+    ],
+    "lessonsLearned": [
+      "Frequency-domain features (PSD) added real signal beyond raw waveform inputs",
+      "Visualization and evaluation tooling were as important as the model itself for a monitoring use case"
+    ]
+  },
+  {
+    "id": "proj-insightpdf",
+    "title": "InsightPDF — RAG Document Intelligence Platform",
+    "subtitle": "Conversational Q&A and summarization over large PDFs",
+    "images": [
+      "/projects/insightpdf-1.jpg"
+    ],
+    "demoVideo": "",
+    "architectureDiagram": "/projects/insightpdf-architecture.png",
+    "githubUrl": "https://github.com/Roshh21/InsightPDF",
+    "liveUrl": "",
+    "techStack": ["LangChain", "ChromaDB", "HuggingFace", "Streamlit", "Ollama (Llama-3)"],
+    "keyFeatures": [
+      "Streamlit-based RAG app that ingests large PDFs and returns structured summaries plus conversational Q&A over document content",
+      "Modular LangChain backend for document classification, summarization, retrieval and conversational agents",
+      "ChromaDB + HuggingFace embeddings for persistent vector storage",
+      "Locally-orchestrated Ollama (Llama-3) LLM for grounded, source-based Q&A"
+    ],
+    "results": [
+      "Fully local RAG stack — no external LLM API dependency",
+      "Structured, section-aware summaries instead of flat text dumps"
+    ],
+    "challenges": [
+      "Keeping answers grounded to the source PDF and avoiding hallucination",
+      "Chunking long documents while preserving enough context for retrieval"
+    ],
+    "lessonsLearned": [
+      "Modular retrieval/summarization/classification stages made the backend easy to extend",
+      "Local LLM orchestration (Ollama) is a viable, cost-free alternative to hosted APIs for RAG prototypes"
+    ]
+  },
+  {
+    "id": "proj-traffic-signal",
+    "title": "Traffic Signal Management",
+    "subtitle": "Multi-agent reinforcement learning for adaptive traffic control",
+    "images": [
+      "/projects/traffic-thumb.jpg"
+    ],
+    "demoVideo": "/projects/traffic-demo.mp4",
+    "architectureDiagram": "",
+    "githubUrl": "https://github.com/Roshh21/rl_traffic",
+    "liveUrl": "",
+    "techStack": ["Multi-Agent Reinforcement Learning (PPO)", "SUMO", "Python"],
+    "keyFeatures": [
+      "PPO-based RL model that optimizes traffic signal timings using SUMO-simulated real-world traffic data",
+      "Custom reward strategies that prioritize high-traffic lanes to reduce overall urban congestion"
+    ],
+    "results": [
+      "Adaptive signal timing that responds to simulated real-time traffic load",
+      "Reward shaping tuned specifically toward congestion reduction on high-traffic lanes"
+    ],
+    "challenges": [
+      "Designing a reward function that balances fairness across lanes with overall throughput",
+      "Getting stable multi-agent training convergence in a shared traffic environment"
+    ],
+    "lessonsLearned": [
+      "Reward shaping mattered more than raw model capacity for this environment",
+      "SUMO simulation fidelity was key to getting policies that would generalize"
+    ]
+  },
+  {
+    "id": "proj-arcflow",
+    "title": "ArcFlow — Interactive Story Platform",
+    "subtitle": "AI-driven branching narrative platform",
+    "images": [
+      "/projects/arcflow-1.jpg"
+    ],
+    "demoVideo": "",
+    "architectureDiagram": "",
+    "githubUrl": "https://github.com/Roshh21/ArcFlow",
+    "liveUrl": "",
+    "techStack": ["React", "FastAPI", "MongoDB", "Generative AI API"],
+    "keyFeatures": [
+      "AI-driven story platform with dynamic branching choices",
+      "Genre/mood-aware generative API integration for narrative progression",
+      "Secure per-user story history management"
+    ],
+    "results": [
+      "Fully dynamic branching narratives generated on the fly rather than pre-scripted",
+      "Persistent, isolated story history per user"
+    ],
+    "challenges": [
+      "Keeping generated narrative continuity coherent across branching choices",
+      "Designing a data model that supports per-user branching story state"
+    ],
+    "lessonsLearned": [
+      "Mood/genre conditioning noticeably improved narrative consistency",
+      "Clean separation between story-state storage and generation logic simplified branching"
+    ]
+  }
+]

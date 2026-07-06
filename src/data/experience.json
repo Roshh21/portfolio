@@ -1,0 +1,17 @@
+[
+  {
+    "id": "exp-1",
+    "role": "AI/ML Engineering Intern",
+    "company": "Mathological Technologies Private Limited",
+    "duration": "Current",
+    "location": "Bengaluru, India",
+    "summary": "Building an AI-driven predictive maintenance system for Metro Rail assets from fault-event and IoT sensor data.",
+    "details": [
+      "Performing exploratory data analysis (EDA), data validation and visualization to surface patterns, trends and potential failure indicators in operational datasets.",
+      "Assisting in data preprocessing, cleaning and feature engineering to turn raw sensor and maintenance logs into ML-ready datasets.",
+      "Researching predictive maintenance methodologies and failure-prediction techniques for rail asset monitoring.",
+      "Collaborating with the team on data-driven solutions aimed at improving asset reliability, reducing unplanned breakdowns and optimizing maintenance planning."
+    ],
+    "stack": ["Python", "Pandas", "NumPy", "Scikit-learn", "SQL", "Data Visualization"]
+  }
+]

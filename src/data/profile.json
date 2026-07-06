@@ -1,0 +1,43 @@
+{
+  "name": "Roshni Singh",
+  "roles": ["AI Engineer", "ML Engineer", "GenAI Engineer", "Full Stack Developer"],
+  "tagline": "I build intelligent systems that turn data into decisions from research notebooks to production APIs.",
+  "location": "Bengaluru, India",
+  "email": "roshnisingh1810@gmail.com",
+  "resumeUrl": "/resume.pdf",
+  "socials": {
+    "github": "https://github.com/Roshh21",
+    "linkedin": "https://www.linkedin.com/in/roshni-r-singh-7581ba286/",
+    "leetcode": "https://leetcode.com/u/Rosh_21/",
+    "twitter": "",
+    "gfg": "https://www.geeksforgeeks.org/profile/roshniraj1c22"
+  },
+  "education": [
+    {
+      "degree": "B.Tech in Computer Science and Engineering",
+      "institution": "Vellore Institute of Technology",
+      "duration": "2022 — 2026",
+      "detail": "Coursework spanning deep learning, reinforcement learning, transformers and applied signal processing."
+    },
+    {
+      "degree": "Senior Secondary Education (12th)",
+      "institution": "Delhi Public School Bangalore South",
+      "duration": "2022",
+      "detail": ""
+    }
+  ],
+  "internships": [
+    {
+      "role": "AI/ML Engineering Intern",
+      "company": "Mathological Technologies Private Limited",
+      "duration": "Current",
+      "detail": "Working on an AI-driven predictive maintenance system for Metro Rail assets, using fault-event and IoT sensor data to flag failure risk before it happens."
+    }
+  ],
+  "researchInterests": [
+    "Predictive maintenance & failure prediction on IoT sensor data",
+    "Retrieval-Augmented Generation (RAG) & LLM-grounded Q&A",
+    "Multi-agent Reinforcement Learning",
+    "Signal processing for seismic & sensor event detection"
+  ]
+}

@@ -1,0 +1,18 @@
+[
+  {
+    "id": "ach-1",
+    "type": "certification",
+    "title": "IBM Generative AI Professional Certificate",
+    "issuer": "IBM",
+    "date": "",
+    "link": ""
+  },
+  {
+    "id": "ach-2",
+    "type": "coding",
+    "title": "300+ Problems Solved",
+    "issuer": "LeetCode & GeeksforGeeks",
+    "date": "",
+    "link": ""
+  }
+]

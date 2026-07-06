@@ -1,0 +1,32 @@
+[
+  {
+    "category": "AI / Machine Learning",
+    "icon": "brain",
+    "items": ["PyTorch", "TensorFlow", "CNN", "Transformers", "Deep Learning", "Reinforcement Learning", "PSD Analysis"]
+  },
+  {
+    "category": "Generative AI",
+    "icon": "sparkles",
+    "items": ["RAG", "LangChain", "ChromaDB", "Ollama", "Prompt Engineering", "HuggingFace"]
+  },
+  {
+    "category": "Data",
+    "icon": "database",
+    "items": ["Pandas", "NumPy", "MongoDB", "SQL"]
+  },
+  {
+    "category": "Full Stack",
+    "icon": "code",
+    "items": ["React.js", "FastAPI", "Streamlit"]
+  },
+  {
+    "category": "Languages",
+    "icon": "terminal",
+    "items": ["Python", "Java", "JavaScript"]
+  },
+  {
+    "category": "Tools",
+    "icon": "wrench",
+    "items": ["Git", "GitHub", "SUMO"]
+  }
+]
