@@ -90,11 +90,11 @@
     "tier": "primary",
     "status": "shipped",
     "statusLabel": "",
-    "images": [],
+    "images": ["/projects/portfolio.png"],
     "demoVideo": "",
     "architectureDiagram": "",
     "githubUrl": "https://github.com/Roshh21/portfolio",
-    "liveUrl": "https://roshni-singh.vercel.app/",
+    "liveUrl": "https://portfolio-roshnidev.vercel.app/",
     "techStack": ["React", "Vite", "Tailwind CSS", "Framer Motion", "TypeScript"],
     "tabs": [
       { "key": "keyFeatures", "label": "Key Features" },

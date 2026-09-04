@@ -55,19 +55,5 @@
       "OOP"
     ],
     "githubUrl": "https://github.com/Roshh21/Hospital-Management-java-"
-  },
-  {
-    "id": "minor-portfolio",
-    "title": "Portfolio Website",
-    "subtitle": "This portfolio",
-    "description": "The city-themed portfolio you are viewing \u2014 built to present engineering experience, projects and technical work.",
-    "techStack": [
-      "React",
-      "Vite",
-      "Tailwind CSS",
-      "Framer Motion"
-    ],
-    "githubUrl": "https://github.com/Roshh21/portfolio",
-    "liveUrl": "https://portfolio-roshnidev.vercel.app/"
   }
 ]
