@@ -1,12 +1,177 @@
 [
   {
+    "id": "proj-coding-arena",
+    "title": "Coding Arena",
+    "subtitle": "Multiplayer Coding Competition Platform",
+    "tier": "primary",
+    "status": "shipped",
+    "statusLabel": "",
+    "images": [],
+    "demoVideo": "",
+    "architectureDiagram": "",
+    "githubUrl": "https://github.com/Roshh21/coding-arena",
+    "liveUrl": "https://coding-arena.vercel.app/",
+    "techStack": ["MERN Stack", "Socket.IO", "MongoDB", "React", "Node.js", "Monaco Editor"],
+    "tabs": [
+      { "key": "keyFeatures", "label": "Key Features" },
+      { "key": "results", "label": "Results" },
+      { "key": "challenges", "label": "Challenges" },
+      { "key": "lessonsLearned", "label": "Lessons Learned" }
+    ],
+    "keyFeatures": [
+      "Real-time multiplayer platform where developers compete through coding, debugging, DSA, SQL, logic, output-prediction and programming puzzles",
+      "Supports 1v1, Free-for-All and Team-based matches with private rooms for up to 10 players",
+      "Custom game rooms with configurable categories, difficulty, rounds, duration and team settings",
+      "Real-time match synchronization using Socket.IO for player states, timers, submissions, scores and match events",
+      "Interactive coding challenges powered by Monaco Editor, alongside non-coding challenge formats such as MCQs, output prediction and debugging",
+      "Ranked progression system with MMR/rating, leagues, streaks, achievements and seasonal leaderboards",
+      "Friend system supporting friend requests, online status, challenges, room invitations and match history"
+    ],
+    "results": [
+      "Built the platform around a reusable question engine, allowing new challenges to be introduced without changing frontend or backend game logic",
+      "Designed a real-time multiplayer architecture capable of synchronizing players, timers, submissions and scores across an active match",
+      "Created a progression system that connects performance → rating → league → difficulty, giving players a reason to continue playing",
+      "Designed multiple challenge formats so the platform is not limited to traditional competitive programming",
+      "Established a scalable foundation for future features such as spectator mode, tournaments, seasonal rankings, category-specific ratings and additional game modes"
+    ],
+    "challenges": [
+      "Designing a real-time state-management system where all players must see consistent timers, scores and match states",
+      "Preventing race conditions when multiple players submit answers or disconnect at the same time",
+      "Designing a flexible question schema capable of supporting completely different challenge types such as MCQ, debugging, output prediction, SQL and full coding problems",
+      "Building matchmaking and rating logic that remains fair across different skill levels, game modes and player counts",
+      "Handling multiplayer room lifecycle including creation, joining, leaving, reconnecting, ready states and match completion"
+    ],
+    "lessonsLearned": [
+      "Real-time multiplayer applications require a different architecture from conventional CRUD applications because state synchronization becomes a core problem",
+      "Game logic should be separated from question data so the platform can scale from dozens to thousands of challenges without rewriting application logic",
+      "WebSockets are useful for transient multiplayer state, while MongoDB is better suited for persistent entities such as users, matches, ratings, questions and achievements",
+      "Competitive progression works better when rating/MMR is separated from individual match scores"
+    ]
+  },
+  {
+    "id": "proj-laststand",
+    "title": "Last Stand",
+    "subtitle": "Real-time multiplayer social strategy game",
+    "tier": "primary",
+    "status": "in-development",
+    "statusLabel": "Currently building",
+    "images": [],
+    "demoVideo": "",
+    "architectureDiagram": "/projects/laststand-architecture.svg",
+    "githubUrl": "https://github.com/Roshh21/last-stand-2d",
+    "liveUrl": "",
+    "techStack": ["three.js", "TypeScript", "React.js", "Node.js", "WebSockets", "PostgreSQL"],
+    "tabs": [
+      { "key": "keyFeatures", "label": "What It Is" },
+      { "key": "architectureNotes", "label": "Architecture" },
+      { "key": "whatsNext", "label": "What's Next" }
+    ],
+    "keyFeatures": [
+      "A real-time multiplayer platform targeting 20–50 concurrent players, with React and three.js clients talking to a Node.js/TypeScript backend over WebSockets",
+      "Server-authoritative gameplay: clients send player intents, the backend validates actions and applies state transitions, then synchronises updated state back to every connected client",
+      "Island — the flagship multiplayer experience — built around cooperative tasks, hidden roles, fragmented information, real-time communication and constrained voting",
+      "Tournament progression that carries player state across matches and narrows the player pool round by round toward a two-player final"
+    ],
+    "architectureNotes": [
+      "Reusable multiplayer services for matchmaking, private rooms, real-time lobbies, persistent sessions, and reconnect/recovery — shared infrastructure multiple games can sit on top of",
+      "Versioned, schema-first message contracts shared between the TypeScript and three.js clients, with generated types to keep the web client, backend and 3D client in sync",
+      "Application data split into static game content, dynamic match state, and persistent player data — in-memory real-time state kept separate from PostgreSQL-backed accounts, match history, progression and telemetry"
+    ],
+    "whatsNext": [
+      "Finishing the standalone AI game mode, so the core gameplay loop is playable against AI-controlled opponents outside of live matches",
+      "Rounding out the tournament bracket flow and match lifecycle management",
+      "This is an active project — the multiplayer foundation, lobby/session layer and Island prototype are underway, not the full game"
+    ]
+  },
+  {
+    "id": "proj-portfolio",
+    "title": "Portfolio Website",
+    "subtitle": "City-themed interactive developer portfolio",
+    "tier": "primary",
+    "status": "shipped",
+    "statusLabel": "",
+    "images": [],
+    "demoVideo": "",
+    "architectureDiagram": "",
+    "githubUrl": "https://github.com/Roshh21/portfolio",
+    "liveUrl": "https://roshni-singh.vercel.app/",
+    "techStack": ["React", "Vite", "Tailwind CSS", "Framer Motion", "TypeScript"],
+    "tabs": [
+      { "key": "keyFeatures", "label": "Key Features" },
+      { "key": "results", "label": "Results" },
+      { "key": "challenges", "label": "Challenges" },
+      { "key": "lessonsLearned", "label": "Lessons Learned" }
+    ],
+    "keyFeatures": [
+      "Interactive portfolio with a city-skyline metaphor where projects are presented as buildings in a dynamic day/night theme",
+      "Smooth animations and scroll-triggered reveals using Framer Motion for engaging narrative flow",
+      "Fully responsive design that adapts seamlessly from mobile (390px) to desktop (1920px) with a hamburger menu and touch-friendly interactions",
+      "Accessible component system with high contrast ratios (AA/AAA WCAG compliance) across light and dark modes",
+      "Rich project cards with live demos, GitHub links, tech stacks, architecture diagrams and detailed feature/results/challenges content"
+    ],
+    "results": [
+      "Created a memorable, interactive first impression that stands out from traditional portfolio formats",
+      "Built a modular design system in Tailwind that scales across all breakpoints while maintaining visual consistency",
+      "Achieved pixel-perfect animations and micro-interactions that enhance the user experience without compromising performance",
+      "Implemented a theme-aware token system that ensures correct contrast in both light and dark modes"
+    ],
+    "challenges": [
+      "Designing a metaphor (city skyline) that communicates portfolio information intuitively while remaining visually engaging",
+      "Ensuring smooth animations across all breakpoints without performance degradation on mobile devices",
+      "Managing a complex token system to enforce consistent, accessible color usage across components",
+      "Building responsive layouts that work seamlessly from 390px mobile width to 1920px+ desktop displays"
+    ],
+    "lessonsLearned": [
+      "A strong visual metaphor makes a portfolio memorable and differentiates it from competitors",
+      "Investing in a design token system early made it possible to ensure accessibility across themes",
+      "Mobile-first responsive design is essential — desktop can look great, but mobile forces you to prioritize clarity",
+      "Animations should enhance, not distract — purposeful motion adds delight without sacrificing usability"
+    ]
+  },
+  {
+    "id": "proj-insightpdf",
+    "title": "InsightPDF",
+    "subtitle": "Agentic RAG document intelligence platform",
+    "tier": "primary",
+    "status": "shipped",
+    "statusLabel": "",
+    "images": ["/projects/insightpdf-2.png"],
+    "demoVideo": "",
+    "architectureDiagram": "/projects/insightpdf-architecture.png",
+    "githubUrl": "https://github.com/Roshh21/InsightPDF",
+    "liveUrl": "https://insightpdf-rag.vercel.app/",
+    "techStack": ["Next.js", "TypeScript", "Python", "LangChain", "LangGraph", "ChromaDB", "HuggingFace", "Ollama", "PostgreSQL"],
+    "keyFeatures": [
+      "Agentic document intelligence platform that ingests large document collections and uses stateful LangGraph workflows to retrieve, extract, analyse, compare and generate evidence-backed results beyond conventional RAG Q&A",
+      "Document capability system that classifies uploads by type and exposes task-specific workflows for research papers, literature and study material, alongside universal summarisation and conversational Q&A",
+      "Interactive learning workflows that generate chapter summaries, notes, quizzes, flashcards and configurable question papers, grounded in the uploaded material",
+      "Book/literature workflows with spoiler-controlled summaries, chapter analysis, character and theme analysis, and contextual Q&A with user-controlled detail and spoiler levels"
+    ],
+    "results": [
+      "An agentic tool layer for semantic retrieval, section/page lookup, structured extraction, document comparison, calculation and report generation, with workflows selecting tools based on user intent",
+      "Iterative retrieval and validation that evaluates evidence, refines queries when needed, and grounds every response with document- and page-level citations",
+      "A model-agnostic LLM gateway using cloud APIs as the primary reasoning layer with automatic fallback to local Ollama models when quotas or availability run out",
+      "An evaluation and observability layer measuring retrieval relevance, answer faithfulness, citation accuracy, latency and agent/tool execution"
+    ],
+    "challenges": [
+      "Keeping multi-step agentic workflows grounded — evaluating evidence and refining retrieval instead of letting the model answer from prior knowledge",
+      "Separating deterministic processing (parsing, calculation, retrieval, validation) from agentic planning so workflow behaviour stays controllable",
+      "Designing task-specific workflows (study material vs. literature vs. research papers) without duplicating the retrieval/citation core"
+    ],
+    "lessonsLearned": [
+      "A model-agnostic gateway with local fallback removed a single point of failure without adding much complexity",
+      "Investing in an evaluation layer early made it possible to actually measure whether agentic changes were improvements",
+      "Document-type-aware capabilities were more useful to build than one generic Q&A workflow"
+    ]
+  },
+  {
     "id": "proj-seismic-detection",
     "title": "Seismic Event Detection System",
     "subtitle": "CNN + Transformer pipeline for earthquake detection & risk alerts",
-    "images": [
-      "/projects/seismic-1.jpg",
-      "/projects/seismic-2.jpg"
-    ],
+    "tier": "primary",
+    "status": "shipped",
+    "statusLabel": "",
+    "images": ["/projects/seismic-1.jpg", "/projects/seismic-2.jpg"],
     "demoVideo": "",
     "architectureDiagram": "/projects/seismic-architecture.png",
     "githubUrl": "https://github.com/Roshh21/seismic-event-detection-system",
@@ -32,48 +197,18 @@
     ]
   },
   {
-    "id": "proj-insightpdf",
-    "title": "InsightPDF — RAG Document Intelligence Platform",
-    "subtitle": "Conversational Q&A and summarization over large PDFs",
-    "images": [
-      "/projects/insightpdf-1.jpg"
-    ],
-    "demoVideo": "",
-    "architectureDiagram": "/projects/insightpdf-architecture.png",
-    "githubUrl": "https://github.com/Roshh21/InsightPDF",
-    "liveUrl": "",
-    "techStack": ["LangChain", "ChromaDB", "HuggingFace", "Streamlit", "Ollama (Llama-3)"],
-    "keyFeatures": [
-      "Streamlit-based RAG app that ingests large PDFs and returns structured summaries plus conversational Q&A over document content",
-      "Modular LangChain backend for document classification, summarization, retrieval and conversational agents",
-      "ChromaDB + HuggingFace embeddings for persistent vector storage",
-      "Locally-orchestrated Ollama (Llama-3) LLM for grounded, source-based Q&A"
-    ],
-    "results": [
-      "Fully local RAG stack — no external LLM API dependency",
-      "Structured, section-aware summaries instead of flat text dumps"
-    ],
-    "challenges": [
-      "Keeping answers grounded to the source PDF and avoiding hallucination",
-      "Chunking long documents while preserving enough context for retrieval"
-    ],
-    "lessonsLearned": [
-      "Modular retrieval/summarization/classification stages made the backend easy to extend",
-      "Local LLM orchestration (Ollama) is a viable, cost-free alternative to hosted APIs for RAG prototypes"
-    ]
-  },
-  {
     "id": "proj-traffic-signal",
     "title": "Traffic Signal Management",
     "subtitle": "Multi-agent reinforcement learning for adaptive traffic control",
-    "images": [
-      "/projects/traffic-thumb.jpg"
-    ],
+    "tier": "secondary",
+    "status": "shipped",
+    "statusLabel": "",
+    "images": ["/projects/traffic-thumb.jpg"],
     "demoVideo": "/projects/traffic-demo.mp4",
     "architectureDiagram": "",
     "githubUrl": "https://github.com/Roshh21/rl_traffic",
     "liveUrl": "",
-    "techStack": ["Multi-Agent Reinforcement Learning (PPO)", "SUMO", "Python"],
+    "techStack": ["Multi-Agent RL (PPO)", "SUMO", "Python"],
     "keyFeatures": [
       "PPO-based RL model that optimizes traffic signal timings using SUMO-simulated real-world traffic data",
       "Custom reward strategies that prioritize high-traffic lanes to reduce overall urban congestion"
@@ -93,11 +228,12 @@
   },
   {
     "id": "proj-arcflow",
-    "title": "ArcFlow — Interactive Story Platform",
+    "title": "ArcFlow",
     "subtitle": "AI-driven branching narrative platform",
-    "images": [
-      "/projects/arcflow-1.jpg"
-    ],
+    "tier": "secondary",
+    "status": "shipped",
+    "statusLabel": "",
+    "images": ["/projects/arcflow-1.jpg"],
     "demoVideo": "",
     "architectureDiagram": "",
     "githubUrl": "https://github.com/Roshh21/ArcFlow",

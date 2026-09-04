@@ -1,0 +1,75 @@
+<svg viewBox="0 0 900 560" xmlns="http://www.w3.org/2000/svg" font-family="'Space Grotesk', Arial, sans-serif">
+  <defs>
+    <linearGradient id="signalGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#e4da1b"/>
+      <stop offset="100%" stop-color="#b88347"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#a08ea4"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="900" height="560" fill="#15130f"/>
+
+  <!-- title -->
+  <text x="450" y="42" text-anchor="middle" fill="#f1e6da" font-size="22" font-weight="600">Last Stand — Server-Authoritative Architecture</text>
+  <text x="450" y="66" text-anchor="middle" fill="#95856a" font-size="13">In development · foundational multiplayer platform</text>
+
+  <!-- clients -->
+  <rect x="90" y="100" width="230" height="76" rx="16" fill="#1e1b15" stroke="#5a503f"/>
+  <text x="205" y="132" text-anchor="middle" fill="#f1e6da" font-size="15" font-weight="600">React Web Client</text>
+  <text x="205" y="153" text-anchor="middle" fill="#c0b6a5" font-size="12">Lobby UI · matchmaking</text>
+
+  <rect x="580" y="100" width="230" height="76" rx="16" fill="#1e1b15" stroke="#5a503f"/>
+  <text x="695" y="132" text-anchor="middle" fill="#f1e6da" font-size="15" font-weight="600">Unity Game Client</text>
+  <text x="695" y="153" text-anchor="middle" fill="#c0b6a5" font-size="12">Island gameplay · rendering</text>
+
+  <!-- shared schema note -->
+  <rect x="345" y="112" width="210" height="52" rx="14" fill="none" stroke="#a08ea4" stroke-dasharray="4 4"/>
+  <text x="450" y="133" text-anchor="middle" fill="#b8aabb" font-size="11">Versioned, schema-first</text>
+  <text x="450" y="150" text-anchor="middle" fill="#b8aabb" font-size="11">message contracts</text>
+
+  <!-- websocket gateway -->
+  <rect x="290" y="222" width="320" height="64" rx="16" fill="#1e1b15" stroke="#e4da1b" stroke-opacity="0.5"/>
+  <text x="450" y="248" text-anchor="middle" fill="#efe976" font-size="14" font-weight="600">WebSocket Gateway</text>
+  <text x="450" y="267" text-anchor="middle" fill="#c0b6a5" font-size="11">Client intents ↑ · synced state ↓</text>
+
+  <line x1="205" y1="176" x2="380" y2="222" stroke="#a08ea4" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="695" y1="176" x2="520" y2="222" stroke="#a08ea4" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="400" y1="222" x2="235" y2="176" stroke="#5a503f" stroke-width="1.2" stroke-dasharray="3 4"/>
+  <line x1="500" y1="222" x2="665" y2="176" stroke="#5a503f" stroke-width="1.2" stroke-dasharray="3 4"/>
+
+  <!-- backend core -->
+  <rect x="170" y="330" width="560" height="130" rx="18" fill="url(#signalGrad)" fill-opacity="0.08" stroke="#e4da1b" stroke-opacity="0.6"/>
+  <text x="450" y="358" text-anchor="middle" fill="#f1e6da" font-size="16" font-weight="600">Node.js / TypeScript Backend</text>
+  <text x="450" y="377" text-anchor="middle" fill="#95856a" font-size="11">validates intents → applies state transitions → broadcasts state</text>
+
+  <g font-size="11.5" fill="#c0b6a5">
+    <rect x="195" y="392" width="120" height="50" rx="10" fill="#1e1b15" stroke="#3c352a"/>
+    <text x="255" y="413" text-anchor="middle" fill="#efe976" font-weight="600" font-size="12">Matchmaking</text>
+    <text x="255" y="430" text-anchor="middle">&amp; private rooms</text>
+
+    <rect x="325" y="392" width="120" height="50" rx="10" fill="#1e1b15" stroke="#3c352a"/>
+    <text x="385" y="413" text-anchor="middle" fill="#efe976" font-weight="600" font-size="12">Real-Time Lobbies</text>
+    <text x="385" y="430" text-anchor="middle">&amp; sessions</text>
+
+    <rect x="455" y="392" width="120" height="50" rx="10" fill="#1e1b15" stroke="#3c352a"/>
+    <text x="515" y="413" text-anchor="middle" fill="#efe976" font-weight="600" font-size="12">Reconnect</text>
+    <text x="515" y="430" text-anchor="middle">&amp; recovery</text>
+
+    <rect x="585" y="392" width="120" height="50" rx="10" fill="#1e1b15" stroke="#3c352a"/>
+    <text x="645" y="413" text-anchor="middle" fill="#efe976" font-weight="600" font-size="12">Match Lifecycle</text>
+    <text x="645" y="430" text-anchor="middle">management</text>
+  </g>
+
+  <line x1="450" y1="286" x2="450" y2="330" stroke="#a08ea4" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- persistent store -->
+  <rect x="330" y="480" width="240" height="60" rx="16" fill="#1e1b15" stroke="#5a503f"/>
+  <text x="450" y="505" text-anchor="middle" fill="#f1e6da" font-size="14" font-weight="600">PostgreSQL</text>
+  <text x="450" y="524" text-anchor="middle" fill="#c0b6a5" font-size="11">accounts · match history · progression</text>
+
+  <line x1="450" y1="460" x2="450" y2="480" stroke="#a08ea4" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <text x="120" y="500" fill="#5a503f" font-size="10">static content · dynamic match state · persistent player data</text>
+</svg>

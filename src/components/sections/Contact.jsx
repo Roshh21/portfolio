@@ -6,6 +6,10 @@ import GlassCard from '../ui/GlassCard'
 import Button from '../ui/Button'
 import MagneticButton from '../ui/MagneticButton'
 import RevealOnScroll from '../ui/RevealOnScroll'
+import { Avatar } from '../../avatar'
+import CityScene from '../City/CityScene'
+import StringLights from '../City/StringLights'
+import Plant from '../City/Plant'
 import profile from '../../data/profile.json'
 
 const SOCIALS = [
@@ -19,9 +23,12 @@ const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID
 const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID
 const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY
 
+const inputClasses =
+  'w-full rounded-xl bg-surface-solid/60 border border-surface-border px-4 py-3 text-sm text-ink placeholder:text-ink-faint focus-visible:border-accent outline-none transition-colors'
+
 export default function Contact() {
   const formRef = useRef(null)
-  const [status, setStatus] = useState('idle') 
+  const [status, setStatus] = useState('idle')
 
   async function handleSubmit(e) {
     e.preventDefault()
@@ -46,7 +53,14 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="relative section-pad">
+    <section id="contact" className="relative section-pad overflow-hidden">
+      {/* Last stop — the rooftop, evening skyline, warm lights */}
+      <CityScene seed={13} starCount={55} nearHeight={[36, 68]} fade={false} className="opacity-90" />
+      <div
+        className="absolute inset-x-0 top-0 h-1/4 -z-10"
+        style={{ background: 'linear-gradient(to bottom, rgb(var(--canvas)), transparent)' }}
+      />
+
       <div className="container-max mx-auto">
         <SectionHeading
           eyebrow="// contact"
@@ -56,13 +70,21 @@ export default function Contact() {
         />
 
         <RevealOnScroll className="max-w-3xl mx-auto">
-          <GlassCard className="glass-strong p-8 sm:p-10 grid md:grid-cols-2 gap-10">
+          <StringLights className="mb-2 max-w-md mx-auto opacity-90" />
+          <GlassCard className="glass-panel-strong p-8 sm:p-10 grid md:grid-cols-2 gap-10 relative">
+            <Plant className="absolute -top-6 -right-3 w-12 hidden md:block opacity-90" />
+
             <div className="flex flex-col justify-between gap-8">
               <div>
-                <h3 className="font-display text-xl font-semibold text-ink mb-3">Get in touch</h3>
+                <div className="flex items-center gap-4 mb-3">
+                  <div className="w-14 shrink-0">
+                    <Avatar pose="bust" ariaLabel="Illustration of Roshni" />
+                  </div>
+                  <h3 className="font-display text-xl font-semibold text-ink">Get in touch</h3>
+                </div>
                 <a
                   href={`mailto:${profile.email}`}
-                  className="flex items-center gap-2 text-signal-soft hover:text-signal transition-colors text-sm break-all"
+                  className="flex items-center gap-2 text-accent hover:text-accent-soft transition-colors text-sm break-all"
                 >
                   <FiMail /> {profile.email}
                 </a>
@@ -80,7 +102,7 @@ export default function Contact() {
                       target="_blank"
                       rel="noreferrer"
                       aria-label={label}
-                      className="w-11 h-11 rounded-full glass flex items-center justify-center text-ink-muted hover:text-signal-soft hover:border-signal/40 transition-colors"
+                      className="w-11 h-11 rounded-full glass-panel flex items-center justify-center text-ink-muted hover:text-accent hover:border-accent/40 transition-colors"
                     >
                       <Icon />
                     </a>
@@ -100,27 +122,13 @@ export default function Contact() {
                 <label htmlFor="name" className="text-xs font-mono text-ink-muted mb-1.5 block">
                   Name
                 </label>
-                <input
-                  id="name"
-                  name="user_name"
-                  type="text"
-                  required
-                  className="w-full rounded-xl bg-white/[0.03] border border-void-border px-4 py-3 text-sm text-ink placeholder:text-ink-faint focus-visible:border-signal outline-none transition-colors"
-                  placeholder="Ada Lovelace"
-                />
+                <input id="name" name="user_name" type="text" required className={inputClasses} placeholder="Ada Lovelace" />
               </div>
               <div>
                 <label htmlFor="email" className="text-xs font-mono text-ink-muted mb-1.5 block">
                   Email
                 </label>
-                <input
-                  id="email"
-                  name="user_email"
-                  type="email"
-                  required
-                  className="w-full rounded-xl bg-white/[0.03] border border-void-border px-4 py-3 text-sm text-ink placeholder:text-ink-faint focus-visible:border-signal outline-none transition-colors"
-                  placeholder="ada@example.com"
-                />
+                <input id="email" name="user_email" type="email" required className={inputClasses} placeholder="ada@example.com" />
               </div>
               <div>
                 <label htmlFor="message" className="text-xs font-mono text-ink-muted mb-1.5 block">
@@ -131,7 +139,7 @@ export default function Contact() {
                   name="message"
                   rows={4}
                   required
-                  className="w-full rounded-xl bg-white/[0.03] border border-void-border px-4 py-3 text-sm text-ink placeholder:text-ink-faint focus-visible:border-signal outline-none transition-colors resize-none"
+                  className={`${inputClasses} resize-none`}
                   placeholder="Let's talk about..."
                 />
               </div>
@@ -141,7 +149,7 @@ export default function Contact() {
               </Button>
 
               {status === 'error' && (
-                <p className="text-xs text-amber font-mono" role="alert">
+                <p className="text-xs text-warn font-mono" role="alert">
                   Message not sent. Please try again or email me directly at {profile.email}.
                 </p>
               )}

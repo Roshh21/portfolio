@@ -1,8 +1,13 @@
-export default function Badge({ children, className = '' }) {
+const SIZES = {
+  sm: 'text-[10px] px-2 py-0.5',
+  md: 'text-xs px-3 py-1',
+}
+
+export default function Badge({ children, size = 'md', className = '' }) {
   return (
     <span
-      className={`font-mono text-xs px-3 py-1 rounded-full border border-void-border
-        bg-white/[0.03] text-ink-muted whitespace-nowrap ${className}`}
+      className={`font-mono rounded-full border border-surface-border
+        bg-surface-solid/40 text-ink-muted whitespace-nowrap ${SIZES[size] ?? SIZES.md} ${className}`}
     >
       {children}
     </span>

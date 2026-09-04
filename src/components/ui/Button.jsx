@@ -1,10 +1,9 @@
 import { motion } from 'framer-motion'
 
 const VARIANTS = {
-  primary:
-    'bg-signal-gradient text-void shadow-glow hover:shadow-[0_0_50px_-8px_rgba(228,218,27,0.65)]',
-  ghost: 'glass text-ink hover:bg-white/[0.08]',
-  outline: 'border border-void-border text-ink hover:border-signal/60 hover:text-signal-soft',
+  primary: 'bg-cta-gradient text-white shadow-glow hover:shadow-glow-lg',
+  ghost: 'glass-panel text-ink hover:bg-accent/[0.08]',
+  outline: 'border border-surface-border text-ink hover:border-accent/60 hover:text-accent',
 }
 
 export default function Button({
@@ -23,7 +22,7 @@ export default function Button({
       whileTap={{ scale: 0.97 }}
       transition={{ type: 'spring', stiffness: 400, damping: 20 }}
       className={`inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-medium
-        transition-colors duration-300 focus-visible:outline-signal ${VARIANTS[variant]} ${className}`}
+        transition-colors duration-300 focus-visible:outline-accent ${VARIANTS[variant]} ${className}`}
       {...props}
     >
       {Icon && <Icon className="text-base" aria-hidden="true" />}

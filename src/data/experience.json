@@ -1,17 +1,90 @@
 [
   {
-    "id": "exp-1",
+    "id": "exp-crashplan",
+    "role": "Junior Software Engineer",
+    "company": "CrashPlan",
+    "duration": "Current",
+    "summary": "Building the log-intelligence backend that helps the team investigate, triage and resolve production errors \u2014 from raw Elasticsearch/Kibana logs to an MCP-based AI assistant that reasons about them.",
+    "stack": [
+      "Kibana",
+      "Elasticsearch",
+      "MongoDB",
+      "Azure Blob Storage",
+      "MCP",
+      "RBAC"
+    ],
+    "highlights": [
+      "Built the log retrieval API and storage architecture \u2014 Elasticsearch/Kibana in, structured MongoDB + Azure Blob out",
+      "Shipped Lucy's prompter workflow, an MCP AI assistant that reasons over active production errors"
+    ],
+    "milestones": [
+      {
+        "id": "m1",
+        "title": "Log Retrieval API",
+        "status": "shipped",
+        "description": "Developed an API to retrieve and filter Kibana/Elasticsearch logs by error type, environment, agent, batch ID, transaction ID and other operational attributes \u2014 a structured interface for investigating error data."
+      },
+      {
+        "id": "m2",
+        "title": "Log Storage Architecture",
+        "status": "shipped",
+        "description": "Designed the log-storage workflow to persist searchable error metadata in MongoDB, while storing complete log payloads in Azure Blob Storage, organised around batch and transaction identifiers."
+      },
+      {
+        "id": "m3",
+        "title": "Large-Scale Log Crawler",
+        "status": "shipped",
+        "description": "Built a crawler to process large volumes of Elasticsearch logs, implementing pagination to overcome the 10,000-result retrieval limit. Added persistent checkpoints in a dedicated MongoDB collection so interrupted crawls resume from their last successful position."
+      },
+      {
+        "id": "m4",
+        "title": "Error-Lifecycle Logic",
+        "status": "shipped",
+        "description": "Implemented logic to determine whether errors are active or resolved, ensuring only relevant ongoing incidents are surfaced for further processing."
+      },
+      {
+        "id": "m5",
+        "title": "Lucy \u2014 MCP AI Assistant Integration",
+        "status": "shipped",
+        "description": "Developed a prompter workflow for Lucy, the company's MCP-based AI assistant, to send structured context about active errors and persist Lucy's responses \u2014 including error details, reasons for continued activity, and suggested resolution actions."
+      },
+      {
+        "id": "m6",
+        "title": "Role-Based Authorization for Lucy",
+        "status": "in-progress",
+        "description": "Currently developing a role-based authorisation layer for Lucy, to validate user permissions before allowing access to potentially restricted operational information."
+      }
+    ]
+  },
+  {
+    "id": "exp-mathological",
     "role": "AI/ML Engineering Intern",
     "company": "Mathological Technologies Private Limited",
-    "duration": "Current",
-    "location": "Bengaluru, India",
-    "summary": "Building an AI-driven predictive maintenance system for Metro Rail assets from fault-event and IoT sensor data.",
-    "details": [
-      "Performing exploratory data analysis (EDA), data validation and visualization to surface patterns, trends and potential failure indicators in operational datasets.",
-      "Assisting in data preprocessing, cleaning and feature engineering to turn raw sensor and maintenance logs into ML-ready datasets.",
-      "Researching predictive maintenance methodologies and failure-prediction techniques for rail asset monitoring.",
-      "Collaborating with the team on data-driven solutions aimed at improving asset reliability, reducing unplanned breakdowns and optimizing maintenance planning."
+    "duration": "Earlier",
+    "summary": "Worked on an AI-driven predictive maintenance system for Metro Rail assets, turning fault-event and IoT sensor data into failure-prediction insight.",
+    "stack": [
+      "Python",
+      "EDA",
+      "Feature Engineering",
+      "Predictive Maintenance"
     ],
-    "stack": ["Python", "Pandas", "NumPy", "Scikit-learn", "SQL", "Data Visualization"]
+    "highlights": [
+      "Built the EDA & feature-engineering pipeline that fed the failure-prediction models",
+      "Researched predictive-maintenance methods for metro rail assets with the team"
+    ],
+    "milestones": [
+      {
+        "id": "m1",
+        "title": "Predictive Maintenance Pipeline",
+        "status": "shipped",
+        "description": "Ran exploratory data analysis, validation and feature engineering on sensor and maintenance datasets to feed fault-event-based failure prediction."
+      },
+      {
+        "id": "m2",
+        "title": "Reliability Research",
+        "status": "shipped",
+        "description": "Researched predictive-maintenance methodologies with the team to help reduce unplanned breakdowns and improve maintenance planning."
+      }
+    ]
   }
 ]

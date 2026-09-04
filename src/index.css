@@ -2,38 +2,166 @@
 @tailwind components;
 @tailwind utilities;
 
+/* =====================================================================
+   CITY DESIGN TOKENS
+   Every color used across the site resolves to one of these custom
+   properties. :root holds the DAY (light) palette; .dark overrides it
+   with the NIGHT palette. Components never hardcode hex values — they
+   reference the Tailwind tokens in tailwind.config.js, which point
+   back here. This is what lets the whole illustrated city "turn into
+   night" on one class toggle instead of swapping designs.
+   Values are space-separated RGB triples so Tailwind's `<alpha-value>`
+   opacity modifiers (e.g. bg-surface/40) work.
+   ===================================================================== */
+:root {
+  color-scheme: light;
+
+  /* text */
+  --ink: 28 35 55;              /* #241C3D */
+  --ink-muted: 72 82 105;       /* #5C4F80 */
+  --ink-faint: 90 100 126;      /* darkened slightly from the original 105/116/140 so small/faint labels clear AA contrast on the light canvas */
+
+  /* surfaces / glass */
+  --surface: 255 255 255;       /* used with low alpha for glass */
+  --surface-alpha: 0.6;
+  --surface-solid: 255 255 255;
+  --surface-strong: 255 255 255;
+  --surface-border: 60 40 100;
+  --surface-border-alpha: 0.14;
+
+  /* brand (used for TEXT/icons/glow — tuned for contrast against the canvas, not for sitting behind white text) */
+  --accent: 79 70 229;         /* violet-600 */
+  --accent-soft: 129 140 248;   /* violet-400 */
+  --accent-deep: 67 56 202;     /* violet-800 */
+  --glow: 255 181 107;          /* warm daylight gold — decorative light sources only (sun, string lights) */
+
+  /* status/warning text — a readable, darker amber. --glow itself is too light
+     to use as text on the day canvas (contrast ~1.6:1), so badges/errors use
+     this instead while decorative glows keep using --glow. */
+  --warn: 180 83 9;
+
+  /* CTA button fill — independent from --accent so a button's background can
+     stay dark/saturated enough for white label text even where --accent
+     itself needs to be light (e.g. used as text on a dark canvas). */
+  --cta-from: 79 70 229;
+  --cta-to: 67 56 202;
+
+  /* Illustrated laptop screen — deliberately theme-invariant (same value in
+     both :root and .dark) since a screen reads as "on" and dark regardless
+     of whether the site itself is in day or night mode. */
+  --screen: 20 18 40;
+
+  /* page canvas (behind the city scenes) */
+  --canvas: 245 243 255;
+  --canvas-raised: 255 255 255;
+
+  /* sky gradient stops */
+  --sky-top: 142 196 255;
+  --sky-mid: 191 224 255;
+  --sky-horizon: 255 225 194;
+
+  /* skyline silhouettes — soft/airier pastel purple so the daytime city reads
+     as warm and light rather than a saturated night palette in daylight */
+  --building-far: 211 208 236;
+  --building-mid: 184 177 224;
+  --building-near: 152 141 204;
+  --window-lit: 224 236 255;    /* cool glass, catching daylight */
+  --window-dark: 255 255 255;
+
+  --shadow-color: 76 60 130;
+  --shadow-strength: 0.14;
+
+  --cloud: 255 255 255;
+  --cloud-alpha: 0.8;
+}
+
+.dark {
+  color-scheme: dark;
+
+  --ink: 246 248 255;
+  --ink-muted: 196 204 222;
+  --ink-faint: 151 161 181;
+
+  --surface: 255 255 255;
+  --surface-alpha: 0.055;
+  --surface-solid: 27 21 51;
+  --surface-strong: 255 255 255;
+  --surface-border: 255 255 255;
+  --surface-border-alpha: 0.14;
+
+  --accent: 165 180 252;
+  --accent-soft: 199 210 254;
+  --accent-deep: 99 102 241;
+  --glow: 255 199 122;
+
+  /* --glow already reads at ~13:1 on the night canvas, so it doubles as the
+     warning/status text color here too. */
+  --warn: 255 199 122;
+
+  /* --accent is a light pastel in dark mode (it's tuned for use as TEXT on
+     the night canvas), which is too low-contrast to sit behind white button
+     labels. The CTA gradient stays a darker, more saturated violet instead. */
+  --cta-from: 124 58 237;
+  --cta-to: 91 33 182;
+
+  --screen: 20 18 40;
+
+  --canvas: 12 9 26;
+  --canvas-raised: 21 16 41;
+
+  --sky-top: 9 7 24;
+  --sky-mid: 26 19 61;
+  --sky-horizon: 54 34 94;
+
+  --building-far: 42 33 74;
+  --building-mid: 33 25 61;
+  --building-near: 24 18 46;
+  --window-lit: 255 201 122;
+  --window-dark: 12 9 26;
+
+  --shadow-color: 0 0 0;
+  --shadow-strength: 0.55;
+
+  --cloud: 255 255 255;
+  --cloud-alpha: 0.06;
+}
+
 @layer base {
   html {
     scroll-behavior: smooth;
   }
 
-  ::selection {
-    background: #e4da1b;
-    color: #15130f;
+  body {
+    @apply font-body antialiased;
+    overflow-x: hidden;
+    background-color: rgb(var(--canvas));
+    color: rgb(var(--ink));
+    transition: background-color 0.7s ease, color 0.7s ease;
   }
 
-  body {
-    overflow-x: hidden;
+  ::selection {
+    background: rgb(var(--accent) / 0.35);
+    color: rgb(var(--ink));
   }
 
   :focus-visible {
-    outline: 2px solid #e4da1b;
+    outline: 2px solid rgb(var(--accent));
     outline-offset: 3px;
     border-radius: 4px;
   }
 
   ::-webkit-scrollbar {
-    width: 8px;
+    width: 10px;
   }
   ::-webkit-scrollbar-track {
-    background: #15130f;
+    background: rgb(var(--canvas));
   }
   ::-webkit-scrollbar-thumb {
-    background: #5a503f;
+    background: rgb(var(--accent) / 0.35);
     border-radius: 8px;
   }
   ::-webkit-scrollbar-thumb:hover {
-    background: #776b55;
+    background: rgb(var(--accent) / 0.55);
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -49,29 +177,51 @@
 }
 
 @layer components {
-  .glass {
-    @apply bg-white/[0.04] backdrop-blur-xl border border-white/[0.08];
+  /* Frosted glass card that sits naturally against a city scene */
+  .glass-panel {
+    @apply border border-surface-border backdrop-blur-xl;
+    background-color: rgb(var(--surface) / var(--surface-alpha));
   }
 
-  .glass-strong {
-    @apply bg-white/[0.06] backdrop-blur-2xl border border-white/[0.1];
+  .glass-panel-strong {
+    @apply border border-surface-border backdrop-blur-2xl;
+    background-color: rgb(var(--surface) / calc(var(--surface-alpha) + 0.05));
   }
 
   .text-gradient {
-    @apply bg-signal-gradient bg-clip-text text-transparent;
+    @apply bg-accent-gradient bg-clip-text text-transparent;
   }
 
   .section-pad {
-    @apply px-6 sm:px-10 lg:px-24 py-24 md:py-32;
+    @apply px-6 sm:px-10 lg:px-20 py-20 md:py-28;
   }
 
   .container-max {
     @apply max-w-7xl mx-auto;
   }
+
+  .eyebrow {
+    @apply font-mono text-xs tracking-[0.22em] uppercase text-accent;
+  }
+
+  /* Warm illuminated-window look for skill/tool chips */
+  .window-card {
+    @apply glass-panel rounded-2xl transition-all duration-300;
+  }
+  .window-card:hover {
+    box-shadow: 0 0 0 1px rgb(var(--accent) / 0.4), 0 12px 34px -10px rgb(var(--accent) / 0.35);
+    transform: translateY(-3px);
+  }
 }
 
 @layer utilities {
   .mask-fade-b {
-    mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 75%, transparent 100%);
+  }
+  .mask-fade-x {
+    mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+  }
+  .text-balance {
+    text-wrap: balance;
   }
 }

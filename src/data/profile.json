@@ -1,9 +1,15 @@
 {
   "name": "Roshni Singh",
-  "roles": ["AI Engineer", "ML Engineer", "GenAI Engineer", "Full Stack Developer"],
-  "tagline": "I build intelligent systems that turn data into decisions from research notebooks to production APIs.",
+  "roles": [
+    "Full-Stack Developer",
+    "Backend Engineer",
+    "AI/ML Engineer",
+    "Game Developer"
+  ],
+  "tagline": "A developer who enjoys building full-stack systems, AI/ML applications, and interactive experiences \u2014 from production backends to the games I ship on the side.",
   "location": "Bengaluru, India",
   "email": "roshnisingh1810@gmail.com",
+  "phone": "7892005377",
   "resumeUrl": "/resume.pdf",
   "socials": {
     "github": "https://github.com/Roshh21",
@@ -16,7 +22,7 @@
     {
       "degree": "B.Tech in Computer Science and Engineering",
       "institution": "Vellore Institute of Technology",
-      "duration": "2022 — 2026",
+      "duration": "2022 \u2014 2026",
       "detail": "Coursework spanning deep learning, reinforcement learning, transformers and applied signal processing."
     },
     {
@@ -26,18 +32,85 @@
       "detail": ""
     }
   ],
-  "internships": [
+  "focusAreas": [
     {
-      "role": "AI/ML Engineering Intern",
-      "company": "Mathological Technologies Private Limited",
-      "duration": "Current",
-      "detail": "Working on an AI-driven predictive maintenance system for Metro Rail assets, using fault-event and IoT sensor data to flag failure risk before it happens."
+      "id": "fullstack",
+      "title": "Full-Stack Development",
+      "icon": "layout",
+      "summary": "React/Next.js frontends backed by REST APIs, built and shipped end to end.",
+      "tags": [
+        "React.js",
+        "Next.js",
+        "Node.js",
+        "FastAPI"
+      ]
+    },
+    {
+      "id": "backend",
+      "title": "Backend & Distributed Systems",
+      "icon": "server",
+      "summary": "Log pipelines, crawlers and storage architecture that hold up at scale.",
+      "tags": [
+        "MongoDB",
+        "Elasticsearch",
+        "Azure Blob Storage",
+        "Distributed Systems"
+      ]
+    },
+    {
+      "id": "aiml",
+      "title": "AI / ML",
+      "icon": "brain",
+      "summary": "CNNs and transformers applied to real signal data, from waveforms to sensors.",
+      "tags": [
+        "PyTorch",
+        "CNNs",
+        "Transformers",
+        "Signal Processing"
+      ]
+    },
+    {
+      "id": "genai",
+      "title": "Generative AI",
+      "icon": "sparkles",
+      "summary": "Agentic RAG workflows that plan, retrieve, and cite their sources.",
+      "tags": [
+        "LangChain",
+        "LangGraph",
+        "RAG",
+        "Vector Embeddings"
+      ]
+    },
+    {
+      "id": "gamedev",
+      "title": "Game Development",
+      "icon": "gamepad",
+      "summary": "A server-authoritative multiplayer platform, built from the network up.",
+      "tags": [
+        "Unity",
+        "C#",
+        "WebSockets",
+        "Server-Authoritative Architecture"
+      ]
+    },
+    {
+      "id": "interactive",
+      "title": "Interactive Experiences",
+      "icon": "wand",
+      "summary": "Interfaces that react \u2014 to state, to input, to the person using them.",
+      "tags": [
+        "Real-Time Sync",
+        "WebSockets",
+        "MCP",
+        "Client-Server Architecture"
+      ]
     }
   ],
   "researchInterests": [
-    "Predictive maintenance & failure prediction on IoT sensor data",
-    "Retrieval-Augmented Generation (RAG) & LLM-grounded Q&A",
-    "Multi-agent Reinforcement Learning",
-    "Signal processing for seismic & sensor event detection"
-  ]
+    "Agentic RAG & LLM-grounded, citation-backed Q&A",
+    "Server-authoritative real-time multiplayer architecture",
+    "Signal processing for seismic & sensor event detection",
+    "Observability & error-intelligence tooling for distributed systems"
+  ],
+  "portfolioUrl": "https://portfolio-roshnidev.vercel.app/"
 }

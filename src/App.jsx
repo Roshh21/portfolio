@@ -1,17 +1,17 @@
 import { useEffect } from 'react'
 import { initLenis } from './lib/lenis'
+import { ThemeProvider } from './theme/ThemeContext'
 
 import Navbar from './components/layout/Navbar'
 import Footer from './components/layout/Footer'
 import CursorGlow from './components/layout/CursorGlow'
-import GradientBlobs from './components/layout/GradientBlobs'
 
 import Hero from './components/sections/Hero'
-import About from './components/sections/About'
 import Experience from './components/sections/Experience'
+import Education from './components/sections/Education'
 import Skills from './components/sections/Skills'
 import Projects from './components/sections/Projects'
-import GithubSection from './components/sections/GithubSection'
+import MinorProjects from './components/sections/MinorProjects'
 import Achievements from './components/sections/Achievements'
 import Contact from './components/sections/Contact'
 
@@ -22,36 +22,24 @@ export default function App() {
   }, [])
 
   return (
-    <div className="relative">
-      <CursorGlow />
-      <Navbar />
+    <ThemeProvider>
+      <div className="relative">
+        <CursorGlow />
+        <Navbar />
 
-      <main>
-        <Hero />
-
-        <div className="relative">
-          <GradientBlobs />
-          <About />
+        <main>
+          <Hero />
           <Experience />
-        </div>
-
-        <Skills />
-
-        <div className="relative">
-          <GradientBlobs />
+          <Education />
+          <Skills />
           <Projects />
-        </div>
-
-        {/* <GithubSection /> */}
-        <Achievements />
-
-        <div className="relative">
-          <GradientBlobs />
+          <MinorProjects />
+          <Achievements />
           <Contact />
-        </div>
-      </main>
+        </main>
 
-      <Footer />
-    </div>
+        <Footer />
+      </div>
+    </ThemeProvider>
   )
 }

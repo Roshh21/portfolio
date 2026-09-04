@@ -1,32 +1,52 @@
 [
   {
-    "category": "AI / Machine Learning",
+    "category": "Languages",
+    "icon": "terminal",
+    "items": ["Java", "Python", "JavaScript", "TypeScript", "SQL", "C#"]
+  },
+  {
+    "category": "Frontend",
+    "icon": "code",
+    "items": ["React.js", "Next.js", "Streamlit"]
+  },
+  {
+    "category": "Backend & Real-Time",
+    "icon": "server",
+    "items": ["Node.js", "FastAPI", "REST APIs", "WebSockets", "MCP"]
+  },
+  {
+    "category": "Databases & Storage",
+    "icon": "database",
+    "items": ["PostgreSQL", "MongoDB", "Redis", "Azure Blob Storage", "Elasticsearch", "ChromaDB", "Qdrant"]
+  },
+  {
+    "category": "Cloud & DevOps",
+    "icon": "cloud",
+    "items": ["Microsoft Azure", "AWS", "Docker", "CI/CD"]
+  },
+  {
+    "category": "AI / ML",
     "icon": "brain",
-    "items": ["PyTorch", "TensorFlow", "CNN", "Transformers", "Deep Learning", "Reinforcement Learning", "PSD Analysis"]
+    "items": ["PyTorch", "CNNs", "Transformers", "Deep Learning", "Reinforcement Learning", "PSD Analysis", "Signal Processing"]
   },
   {
     "category": "Generative AI",
     "icon": "sparkles",
-    "items": ["RAG", "LangChain", "ChromaDB", "Ollama", "Prompt Engineering", "HuggingFace"]
+    "items": ["RAG", "Agentic RAG", "LangChain", "LangGraph", "HuggingFace", "Ollama", "LLM APIs", "Prompt Engineering", "Vector Embeddings"]
   },
   {
-    "category": "Data",
-    "icon": "database",
-    "items": ["Pandas", "NumPy", "MongoDB", "SQL"]
+    "category": "Architecture & Systems",
+    "icon": "layers",
+    "items": ["Client-Server Architecture", "Server-Authoritative Architecture", "Real-Time State Sync", "Distributed Systems", "Model-Agnostic LLM Architecture"]
   },
   {
-    "category": "Full Stack",
-    "icon": "code",
-    "items": ["React.js", "FastAPI", "Streamlit"]
-  },
-  {
-    "category": "Languages",
-    "icon": "terminal",
-    "items": ["Python", "Java", "JavaScript"]
+    "category": "Security",
+    "icon": "shield",
+    "items": ["Authentication", "Authorization", "RBAC", "JWT"]
   },
   {
     "category": "Tools",
     "icon": "wrench",
-    "items": ["Git", "GitHub", "SUMO"]
+    "items": ["Git", "GitHub", "Kibana", "SUMO", "Unity", "Postman"]
   }
 ]

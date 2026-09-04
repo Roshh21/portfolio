@@ -5,76 +5,146 @@ export default {
   theme: {
     extend: {
       colors: {
-        // Design token system — warm dark theme: oak/granite background,
-        // cream ink, soft-yellow signal accent, lilac secondary accent.
-        void: {
-          DEFAULT: '#15130f', // page background — pale-oak-950
-          surface: '#1e1b15', // card / panel background — pale-oak-900
-          raised: '#3c352a', // hover / raised surface — pale-oak-800
-          border: '#5a503f', // pale-oak-700
-        },
-        signal: {
-          DEFAULT: '#e4da1b', // primary accent — soft yellow (light-yellow-500)
-          soft: '#efe976', // light-yellow-300
-        },
-        pulse: {
-          DEFAULT: '#a08ea4', // secondary accent — lilac-ash-400
-          soft: '#b8aabb', // lilac-ash-300
-        },
-        amber: {
-          DEFAULT: '#b88347', // sparing highlight — almond-cream-500
-        },
+        // ---------------------------------------------------------------
+        // City design-token system. Every value is a CSS custom property
+        // defined in src/index.css under :root (day) and .dark (night),
+        // so the whole palette morphs when the theme toggles instead of
+        // hard-swapping components. See src/index.css for the raw values.
+        // ---------------------------------------------------------------
         ink: {
-          DEFAULT: '#f1e6da', // primary text — almond-cream-100 (cream)
-          muted: '#c0b6a5', // secondary text — pale-oak-300
-          faint: '#95856a', // pale-oak-500
+          DEFAULT: 'rgb(var(--ink) / <alpha-value>)',
+          muted: 'rgb(var(--ink-muted) / <alpha-value>)',
+          faint: 'rgb(var(--ink-faint) / <alpha-value>)',
+        },
+        surface: {
+          DEFAULT: 'rgb(var(--surface) / <alpha-value>)',
+          solid: 'rgb(var(--surface-solid) / <alpha-value>)',
+          strong: 'rgb(var(--surface-strong) / <alpha-value>)',
+          border: 'rgb(var(--surface-border) / <alpha-value>)',
+        },
+        accent: {
+          DEFAULT: 'rgb(var(--accent) / <alpha-value>)',
+          soft: 'rgb(var(--accent-soft) / <alpha-value>)',
+          deep: 'rgb(var(--accent-deep) / <alpha-value>)',
+        },
+        glow: {
+          DEFAULT: 'rgb(var(--glow) / <alpha-value>)',
+        },
+        warn: {
+          DEFAULT: 'rgb(var(--warn) / <alpha-value>)',
+        },
+        screen: {
+          DEFAULT: 'rgb(var(--screen) / <alpha-value>)',
+        },
+        canvas: {
+          DEFAULT: 'rgb(var(--canvas) / <alpha-value>)',
+          raised: 'rgb(var(--canvas-raised) / <alpha-value>)',
         },
       },
       fontFamily: {
-        display: ['"Space Grotesk"', 'sans-serif'],
-        body: ['"Inter"', 'sans-serif'],
-        mono: ['"JetBrains Mono"', 'monospace'],
-      },
-      backgroundImage: {
-        'signal-gradient': 'linear-gradient(135deg, #e4da1b 0%, #b88347 100%)',
-        'grid-fade':
-          'radial-gradient(ellipse 80% 60% at 50% 0%, rgba(228,218,27,0.12), transparent)',
+        display: ['Manrope', 'sans-serif'],
+        body: ['DM Sans', 'sans-serif'],
+        mono: ['IBM Plex Mono', 'monospace'],
+        script: ['"Caveat"', 'cursive'],
       },
       boxShadow: {
-        glow: '0 0 40px -10px rgba(228,218,27,0.4)',
-        'glow-violet': '0 0 40px -10px rgba(160,142,164,0.45)',
-        card: '0 8px 32px rgba(0,0,0,0.45)',
+        glow: '0 0 40px -8px rgb(var(--accent) / 0.45)',
+        'glow-lg': '0 0 80px -12px rgb(var(--accent) / 0.5)',
+        window: '0 0 14px 2px rgb(var(--glow) / 0.55)',
+        card: '0 8px 32px rgb(var(--shadow-color) / var(--shadow-strength))',
+        'card-lg': '0 24px 60px -12px rgb(var(--shadow-color) / var(--shadow-strength))',
+        'inset-border': 'inset 0 0 0 1px rgb(var(--surface-border) / 1)',
+      },
+      backgroundImage: {
+        'accent-gradient': 'linear-gradient(135deg, rgb(var(--accent)) 0%, rgb(var(--accent-deep)) 100%)',
+        // Button/CTA fills — kept separate from accent-gradient because
+        // --accent is intentionally a light pastel in dark mode (for text
+        // contrast on the night canvas), which is too washed-out to sit
+        // behind white button labels. cta-gradient stays dark/saturated in
+        // both themes so "Resume" / "Let's talk" stay crisp.
+        'cta-gradient': 'linear-gradient(135deg, rgb(var(--cta-from)) 0%, rgb(var(--cta-to)) 100%)',
+        'sky-gradient': 'linear-gradient(180deg, rgb(var(--sky-top)) 0%, rgb(var(--sky-mid)) 55%, rgb(var(--sky-horizon)) 100%)',
+        'card-sheen': 'linear-gradient(155deg, rgb(var(--surface-strong)) 0%, rgb(var(--surface)) 100%)',
       },
       keyframes: {
-        'trace-pulse': {
-          '0%': { offsetDistance: '0%', opacity: 0 },
-          '10%': { opacity: 1 },
-          '90%': { opacity: 1 },
-          '100%': { offsetDistance: '100%', opacity: 0 },
+        twinkle: {
+          '0%, 100%': { opacity: 0.25, transform: 'scale(0.85)' },
+          '50%': { opacity: 1, transform: 'scale(1.1)' },
         },
-        float: {
-          '0%, 100%': { transform: 'translateY(0px)' },
-          '50%': { transform: 'translateY(-14px)' },
+        drift: {
+          '0%': { transform: 'translateX(-6%)' },
+          '100%': { transform: 'translateX(6%)' },
         },
-        blob: {
-          '0%, 100%': { transform: 'translate(0,0) scale(1)' },
-          '33%': { transform: 'translate(30px,-40px) scale(1.1)' },
-          '66%': { transform: 'translate(-20px,20px) scale(0.95)' },
+        'window-blink': {
+          '0%, 92%, 100%': { opacity: 'var(--win-base, 0.85)' },
+          '96%': { opacity: 'var(--win-dim, 0.35)' },
+        },
+        'glow-pulse': {
+          '0%, 100%': { opacity: 0.6 },
+          '50%': { opacity: 1 },
         },
         'fade-up': {
-          '0%': { opacity: 0, transform: 'translateY(24px)' },
+          '0%': { opacity: 0, transform: 'translateY(28px)' },
           '100%': { opacity: 1, transform: 'translateY(0)' },
+        },
+        'fade-in': {
+          '0%': { opacity: 0 },
+          '100%': { opacity: 1 },
+        },
+        sway: {
+          '0%, 100%': { transform: 'rotate(-1.2deg)' },
+          '50%': { transform: 'rotate(1.2deg)' },
+        },
+        breathe: {
+          '0%, 100%': { transform: 'scaleY(1) translateY(0)' },
+          '50%': { transform: 'scaleY(1.007) translateY(-1.5px)' },
+        },
+        bob: {
+          '0%, 100%': { transform: 'translateY(0px)' },
+          '50%': { transform: 'translateY(-8px)' },
+        },
+        'rail-move': {
+          '0%': { transform: 'translateX(0%)' },
+          '100%': { transform: 'translateX(-50%)' },
+        },
+        shimmer: {
+          '0%': { backgroundPosition: '-200% 0' },
+          '100%': { backgroundPosition: '200% 0' },
         },
         blink: {
           '0%, 100%': { opacity: 1 },
           '50%': { opacity: 0 },
         },
+        steam: {
+          '0%': { opacity: 0, transform: 'translateY(0) scaleY(1)' },
+          '30%': { opacity: 0.6 },
+          '100%': { opacity: 0, transform: 'translateY(-13px) scaleY(1.5)' },
+        },
+        eq: {
+          '0%, 100%': { transform: 'scaleY(0.35)' },
+          '50%': { transform: 'scaleY(1)' },
+        },
       },
       animation: {
-        float: 'float 6s ease-in-out infinite',
-        blob: 'blob 10s ease-in-out infinite',
-        'fade-up': 'fade-up 0.7s ease forwards',
-        blink: 'blink 1s step-start infinite',
+        twinkle: 'twinkle 3.2s ease-in-out infinite',
+        drift: 'drift 60s linear infinite alternate',
+        'drift-slow': 'drift 100s linear infinite alternate',
+        'window-blink': 'window-blink 7s ease-in-out infinite',
+        'glow-pulse': 'glow-pulse 3.5s ease-in-out infinite',
+        'fade-up': 'fade-up 0.8s cubic-bezier(0.22,1,0.36,1) forwards',
+        'fade-in': 'fade-in 0.8s ease forwards',
+        sway: 'sway 6s ease-in-out infinite',
+        breathe: 'breathe 4.6s ease-in-out infinite',
+        bob: 'bob 5s ease-in-out infinite',
+        rail: 'rail-move 22s linear infinite',
+        shimmer: 'shimmer 3s linear infinite',
+        blink: 'blink 1s step-end infinite',
+        steam: 'steam 2.8s ease-in-out infinite',
+        eq: 'eq 0.9s ease-in-out infinite',
+      },
+      transitionTimingFunction: {
+        'out-back': 'cubic-bezier(0.34, 1.56, 0.64, 1)',
+        'out-expo': 'cubic-bezier(0.22, 1, 0.36, 1)',
       },
     },
   },

@@ -1,0 +1,73 @@
+[
+  {
+    "id": "minor-sudoku",
+    "title": "Sudoku Solver",
+    "subtitle": "Backtracking algorithm",
+    "description": "A Python Sudoku solver that uses backtracking to search for a valid solution.",
+    "techStack": [
+      "Python",
+      "Backtracking"
+    ],
+    "githubUrl": "https://github.com/Roshh21/Sudoku-solver"
+  },
+  {
+    "id": "minor-dice",
+    "title": "Dice Roll Game",
+    "subtitle": "Interactive frontend experiment",
+    "description": "A lightweight browser-based dice roll project built with HTML, CSS and JavaScript.",
+    "techStack": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+    "githubUrl": "https://github.com/Roshh21/Dice-roll-game"
+  },
+  {
+    "id": "minor-banking",
+    "title": "Banking Website",
+    "subtitle": "Frontend website",
+    "description": "A frontend banking website focused on building a clean interactive web interface.",
+    "techStack": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+    "githubUrl": "https://github.com/Roshh21/Banking-website"
+  },
+  {
+    "id": "minor-missionaries",
+    "title": "Missionaries & Cannibals",
+    "subtitle": "Classic state-space game",
+    "description": "A Python implementation of the classic 3 missionaries and 3 cannibals river-crossing problem.",
+    "techStack": [
+      "Python",
+      "Problem Solving"
+    ],
+    "githubUrl": "https://github.com/Roshh21/missionaries-and-cannibals-game"
+  },
+  {
+    "id": "minor-hospital",
+    "title": "Hospital Management System",
+    "subtitle": "Java management application",
+    "description": "A Java project for managing patients, doctors and appointments through a simple management workflow.",
+    "techStack": [
+      "Java",
+      "OOP"
+    ],
+    "githubUrl": "https://github.com/Roshh21/Hospital-Management-java-"
+  },
+  {
+    "id": "minor-portfolio",
+    "title": "Portfolio Website",
+    "subtitle": "This portfolio",
+    "description": "The city-themed portfolio you are viewing \u2014 built to present engineering experience, projects and technical work.",
+    "techStack": [
+      "React",
+      "Vite",
+      "Tailwind CSS",
+      "Framer Motion"
+    ],
+    "githubUrl": "https://github.com/Roshh21/portfolio",
+    "liveUrl": "https://portfolio-roshnidev.vercel.app/"
+  }
+]
