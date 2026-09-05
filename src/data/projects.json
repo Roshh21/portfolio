@@ -10,7 +10,7 @@
     "demoVideo": "",
     "architectureDiagram": "",
     "githubUrl": "https://github.com/Roshh21/coding-arena",
-    "liveUrl": "https://coding-arena.vercel.app/",
+    "liveUrl": "",
     "techStack": ["MERN Stack", "Socket.IO", "MongoDB", "React", "Node.js", "Monaco Editor"],
     "tabs": [
       { "key": "keyFeatures", "label": "Key Features" },
