@@ -6,7 +6,7 @@
     "tier": "primary",
     "status": "shipped",
     "statusLabel": "",
-    "images": [],
+    "images": ["/projects/devClash.png"],
     "demoVideo": "",
     "architectureDiagram": "",
     "githubUrl": "https://github.com/Roshh21/devClash",
