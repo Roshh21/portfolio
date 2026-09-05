@@ -1,7 +1,7 @@
 [
   {
     "id": "proj-coding-arena",
-    "title": "Coding Arena",
+    "title": "DevClash",
     "subtitle": "Multiplayer Coding Competition Platform",
     "tier": "primary",
     "status": "shipped",
@@ -9,7 +9,7 @@
     "images": [],
     "demoVideo": "",
     "architectureDiagram": "",
-    "githubUrl": "https://github.com/Roshh21/coding-arena",
+    "githubUrl": "https://github.com/Roshh21/devClash",
     "liveUrl": "",
     "techStack": ["MERN Stack", "Socket.IO", "MongoDB", "React", "Node.js", "Monaco Editor"],
     "tabs": [
@@ -37,7 +37,7 @@
     "challenges": [
       "Designing a real-time state-management system where all players must see consistent timers, scores and match states",
       "Preventing race conditions when multiple players submit answers or disconnect at the same time",
-      "Designing a flexible question schema capable of supporting completely different challenge types such as MCQ, debugging, output prediction, SQL and full coding problems",
+      "Designing a flexible question schema capable of supporting completely different challenge types such as MCQ, debugging, output prediction, SQL and full  problems",
       "Building matchmaking and rating logic that remains fair across different skill levels, game modes and player counts",
       "Handling multiplayer room lifecycle including creation, joining, leaving, reconnecting, ready states and match completion"
     ],
