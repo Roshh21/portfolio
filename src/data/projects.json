@@ -10,7 +10,7 @@
     "demoVideo": "",
     "architectureDiagram": "",
     "githubUrl": "https://github.com/Roshh21/devClash",
-    "liveUrl": "",
+    "liveUrl": "https://devclashio.vercel.app/",
     "techStack": ["MERN Stack", "Socket.IO", "MongoDB", "React", "Node.js", "Monaco Editor"],
     "tabs": [
       { "key": "keyFeatures", "label": "Key Features" },
