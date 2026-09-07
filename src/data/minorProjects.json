@@ -1,5 +1,19 @@
 [
   {
+    "id": "minor-arcflow",
+    "title": "ArcFlow",
+    "subtitle": "AI-driven branching narrative platform",
+    "description": "AI-driven story platform with dynamic branching choices, genre- and mood-aware narrative generation, and secure per-user story history.",
+    "techStack": [
+      "React",
+      "FastAPI",
+      "MongoDB",
+      "Generative AI API"
+    ],
+    "githubUrl": "https://github.com/Roshh21/ArcFlow",
+    "liveUrl": ""
+  },
+  {
     "id": "minor-sudoku",
     "title": "Sudoku Solver",
     "subtitle": "Backtracking algorithm",

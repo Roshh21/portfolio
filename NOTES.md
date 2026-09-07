@@ -4,8 +4,7 @@
 
 ```bash
 cd build
-npm install     # package.json changed (three.js removed, nothing new added)
-npm run dev
+npm install    
 ```
 
 One file was intentionally **left out of this zip**: `public/projects/traffic-demo.mp4`

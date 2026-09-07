@@ -87,8 +87,7 @@
       "icon": "gamepad",
       "summary": "A server-authoritative multiplayer platform, built from the network up.",
       "tags": [
-        "Unity",
-        "C#",
+        "three.js",
         "WebSockets",
         "Server-Authoritative Architecture"
       ]

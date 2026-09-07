@@ -6,17 +6,38 @@
     "tier": "primary",
     "status": "shipped",
     "statusLabel": "",
-    "images": ["/projects/devClash.png"],
+    "images": [
+      "/projects/devClash.png"
+    ],
     "demoVideo": "",
     "architectureDiagram": "",
     "githubUrl": "https://github.com/Roshh21/devClash",
     "liveUrl": "https://devclashio.vercel.app/",
-    "techStack": ["MERN Stack", "Socket.IO", "MongoDB", "React", "Node.js", "Monaco Editor"],
+    "techStack": [
+      "MERN Stack",
+      "Socket.IO",
+      "MongoDB",
+      "React",
+      "Node.js",
+      "Monaco Editor"
+    ],
     "tabs": [
-      { "key": "keyFeatures", "label": "Key Features" },
-      { "key": "results", "label": "Results" },
-      { "key": "challenges", "label": "Challenges" },
-      { "key": "lessonsLearned", "label": "Lessons Learned" }
+      {
+        "key": "keyFeatures",
+        "label": "Key Features"
+      },
+      {
+        "key": "results",
+        "label": "Results"
+      },
+      {
+        "key": "challenges",
+        "label": "Challenges"
+      },
+      {
+        "key": "lessonsLearned",
+        "label": "Lessons Learned"
+      }
     ],
     "keyFeatures": [
       "Real-time multiplayer platform where developers compete through coding, debugging, DSA, SQL, logic, output-prediction and programming puzzles",
@@ -30,7 +51,7 @@
     "results": [
       "Built the platform around a reusable question engine, allowing new challenges to be introduced without changing frontend or backend game logic",
       "Designed a real-time multiplayer architecture capable of synchronizing players, timers, submissions and scores across an active match",
-      "Created a progression system that connects performance → rating → league → difficulty, giving players a reason to continue playing",
+      "Created a progression system that connects performance \u2192 rating \u2192 league \u2192 difficulty, giving players a reason to continue playing",
       "Designed multiple challenge formats so the platform is not limited to traditional competitive programming",
       "Established a scalable foundation for future features such as spectator mode, tournaments, seasonal rankings, category-specific ratings and additional game modes"
     ],
@@ -60,47 +81,83 @@
     "architectureDiagram": "/projects/laststand-architecture.svg",
     "githubUrl": "https://github.com/Roshh21/last-stand-2d",
     "liveUrl": "",
-    "techStack": ["three.js", "TypeScript", "React.js", "Node.js", "WebSockets", "PostgreSQL"],
+    "techStack": [
+      "three.js",
+      "TypeScript",
+      "React.js",
+      "Node.js",
+      "WebSockets",
+      "PostgreSQL"
+    ],
     "tabs": [
-      { "key": "keyFeatures", "label": "What It Is" },
-      { "key": "architectureNotes", "label": "Architecture" },
-      { "key": "whatsNext", "label": "What's Next" }
+      {
+        "key": "keyFeatures",
+        "label": "What It Is"
+      },
+      {
+        "key": "architectureNotes",
+        "label": "Architecture"
+      },
+      {
+        "key": "whatsNext",
+        "label": "What's Next"
+      }
     ],
     "keyFeatures": [
-      "A real-time multiplayer platform targeting 20–50 concurrent players, with React and three.js clients talking to a Node.js/TypeScript backend over WebSockets",
+      "A real-time multiplayer platform targeting 20\u201350 concurrent players, with React and three.js clients talking to a Node.js/TypeScript backend over WebSockets",
       "Server-authoritative gameplay: clients send player intents, the backend validates actions and applies state transitions, then synchronises updated state back to every connected client",
-      "Island — the flagship multiplayer experience — built around cooperative tasks, hidden roles, fragmented information, real-time communication and constrained voting",
+      "Island \u2014 the flagship multiplayer experience \u2014 built around cooperative tasks, hidden roles, fragmented information, real-time communication and constrained voting",
       "Tournament progression that carries player state across matches and narrows the player pool round by round toward a two-player final"
     ],
     "architectureNotes": [
-      "Reusable multiplayer services for matchmaking, private rooms, real-time lobbies, persistent sessions, and reconnect/recovery — shared infrastructure multiple games can sit on top of",
+      "Reusable multiplayer services for matchmaking, private rooms, real-time lobbies, persistent sessions, and reconnect/recovery \u2014 shared infrastructure multiple games can sit on top of",
       "Versioned, schema-first message contracts shared between the TypeScript and three.js clients, with generated types to keep the web client, backend and 3D client in sync",
-      "Application data split into static game content, dynamic match state, and persistent player data — in-memory real-time state kept separate from PostgreSQL-backed accounts, match history, progression and telemetry"
+      "Application data split into static game content, dynamic match state, and persistent player data \u2014 in-memory real-time state kept separate from PostgreSQL-backed accounts, match history, progression and telemetry"
     ],
     "whatsNext": [
       "Finishing the standalone AI game mode, so the core gameplay loop is playable against AI-controlled opponents outside of live matches",
       "Rounding out the tournament bracket flow and match lifecycle management",
-      "This is an active project — the multiplayer foundation, lobby/session layer and Island prototype are underway, not the full game"
+      "This is an active project \u2014 the multiplayer foundation, lobby/session layer and Island prototype are underway, not the full game"
     ]
   },
   {
     "id": "proj-portfolio",
     "title": "Portfolio Website",
     "subtitle": "City-themed interactive developer portfolio",
-    "tier": "primary",
+    "tier": "secondary",
     "status": "shipped",
     "statusLabel": "",
-    "images": ["/projects/portfolio.png"],
+    "images": [
+      "/projects/portfolio.png"
+    ],
     "demoVideo": "",
     "architectureDiagram": "",
     "githubUrl": "https://github.com/Roshh21/portfolio",
     "liveUrl": "https://portfolio-roshnidev.vercel.app/",
-    "techStack": ["React", "Vite", "Tailwind CSS", "Framer Motion", "TypeScript"],
+    "techStack": [
+      "React",
+      "Vite",
+      "Tailwind CSS",
+      "Framer Motion",
+      "TypeScript"
+    ],
     "tabs": [
-      { "key": "keyFeatures", "label": "Key Features" },
-      { "key": "results", "label": "Results" },
-      { "key": "challenges", "label": "Challenges" },
-      { "key": "lessonsLearned", "label": "Lessons Learned" }
+      {
+        "key": "keyFeatures",
+        "label": "Key Features"
+      },
+      {
+        "key": "results",
+        "label": "Results"
+      },
+      {
+        "key": "challenges",
+        "label": "Challenges"
+      },
+      {
+        "key": "lessonsLearned",
+        "label": "Lessons Learned"
+      }
     ],
     "keyFeatures": [
       "Interactive portfolio with a city-skyline metaphor where projects are presented as buildings in a dynamic day/night theme",
@@ -124,8 +181,8 @@
     "lessonsLearned": [
       "A strong visual metaphor makes a portfolio memorable and differentiates it from competitors",
       "Investing in a design token system early made it possible to ensure accessibility across themes",
-      "Mobile-first responsive design is essential — desktop can look great, but mobile forces you to prioritize clarity",
-      "Animations should enhance, not distract — purposeful motion adds delight without sacrificing usability"
+      "Mobile-first responsive design is essential \u2014 desktop can look great, but mobile forces you to prioritize clarity",
+      "Animations should enhance, not distract \u2014 purposeful motion adds delight without sacrificing usability"
     ]
   },
   {
@@ -135,12 +192,24 @@
     "tier": "primary",
     "status": "shipped",
     "statusLabel": "",
-    "images": ["/projects/insightpdf-2.png"],
+    "images": [
+      "/projects/insightpdf-2.png"
+    ],
     "demoVideo": "",
     "architectureDiagram": "/projects/insightpdf-architecture.png",
     "githubUrl": "https://github.com/Roshh21/InsightPDF",
     "liveUrl": "https://insightpdf-rag.vercel.app/",
-    "techStack": ["Next.js", "TypeScript", "Python", "LangChain", "LangGraph", "ChromaDB", "HuggingFace", "Ollama", "PostgreSQL"],
+    "techStack": [
+      "Next.js",
+      "TypeScript",
+      "Python",
+      "LangChain",
+      "LangGraph",
+      "ChromaDB",
+      "HuggingFace",
+      "Ollama",
+      "PostgreSQL"
+    ],
     "keyFeatures": [
       "Agentic document intelligence platform that ingests large document collections and uses stateful LangGraph workflows to retrieve, extract, analyse, compare and generate evidence-backed results beyond conventional RAG Q&A",
       "Document capability system that classifies uploads by type and exposes task-specific workflows for research papers, literature and study material, alongside universal summarisation and conversational Q&A",
@@ -154,7 +223,7 @@
       "An evaluation and observability layer measuring retrieval relevance, answer faithfulness, citation accuracy, latency and agent/tool execution"
     ],
     "challenges": [
-      "Keeping multi-step agentic workflows grounded — evaluating evidence and refining retrieval instead of letting the model answer from prior knowledge",
+      "Keeping multi-step agentic workflows grounded \u2014 evaluating evidence and refining retrieval instead of letting the model answer from prior knowledge",
       "Separating deterministic processing (parsing, calculation, retrieval, validation) from agentic planning so workflow behaviour stays controllable",
       "Designing task-specific workflows (study material vs. literature vs. research papers) without duplicating the retrieval/citation core"
     ],
@@ -171,12 +240,21 @@
     "tier": "primary",
     "status": "shipped",
     "statusLabel": "",
-    "images": ["/projects/seismic-1.jpg", "/projects/seismic-2.jpg"],
+    "images": [
+      "/projects/seismic-1.jpg",
+      "/projects/seismic-2.jpg"
+    ],
     "demoVideo": "",
     "architectureDiagram": "/projects/seismic-architecture.png",
     "githubUrl": "https://github.com/Roshh21/seismic-event-detection-system",
     "liveUrl": "",
-    "techStack": ["PyTorch", "CNN", "Transformers", "STEAD Dataset", "Signal Processing"],
+    "techStack": [
+      "PyTorch",
+      "CNN",
+      "Transformers",
+      "STEAD Dataset",
+      "Signal Processing"
+    ],
     "keyFeatures": [
       "Deep learning system combining CNN and Transformer architectures for earthquake detection, magnitude estimation and epicenter location prediction",
       "Power Spectral Density (PSD) features integrated for enhanced frequency-domain analysis",
@@ -197,18 +275,80 @@
     ]
   },
   {
+    "id": "proj-codeshelf",
+    "title": "CodeShelf",
+    "subtitle": "Git repository study reader",
+    "tier": "primary",
+    "status": "shipped",
+    "statusLabel": "",
+    "images": ["/projects/codeShelf.png"],
+    "demoVideo": "",
+    "architectureDiagram": "",
+    "githubUrl": "https://github.com/Roshh21/CodeShelf",
+    "liveUrl": "https://codeshelfgit.vercel.app/",
+    "techStack": [
+      "React",
+      "Vite",
+      "GitHub API",
+      "Repository Parsing",
+      "Tailwind CSS"
+    ],
+    "tabs": [
+      {
+        "key": "keyFeatures",
+        "label": "Key Features"
+      },
+      {
+        "key": "results",
+        "label": "Results"
+      },
+      {
+        "key": "challenges",
+        "label": "Challenges"
+      },
+      {
+        "key": "lessonsLearned",
+        "label": "Lessons Learned"
+      }
+    ],
+    "keyFeatures": [
+      "A focused study reader that turns Git repositories into cleaner, easier-to-follow learning pages instead of forcing users to navigate raw repository structure",
+      "Accepts a Git repository, directory or individual page as the starting point for exploring project documentation and source content",
+      "Designed around readable project context and documentation while preserving direct access to the original repository",
+      "Built as a lightweight SPA foundation that can later support saved reading history and richer repository analysis"
+    ],
+    "results": [
+      "Created a dedicated reading experience for studying GitHub projects without losing the source repository context",
+      "Established a foundation that can be extended with persistence, history and deeper repository intelligence"
+    ],
+    "challenges": [
+      "Presenting repository content in a way that is easier to study than a raw GitHub directory",
+      "Keeping the reader useful across repository-level, directory-level and individual-page entry points"
+    ],
+    "lessonsLearned": [
+      "A strong reading experience can make existing developer documentation substantially easier to follow",
+      "Keeping the first version focused on navigation and readability creates a clean foundation for future repository intelligence features"
+    ]
+  },
+  {
     "id": "proj-traffic-signal",
     "title": "Traffic Signal Management",
     "subtitle": "Multi-agent reinforcement learning for adaptive traffic control",
     "tier": "secondary",
     "status": "shipped",
     "statusLabel": "",
-    "images": ["/projects/traffic-thumb.jpg"],
+    "images": [
+      "/projects/traffic-thumb.jpg"
+    ],
     "demoVideo": "/projects/traffic-demo.mp4",
     "architectureDiagram": "",
     "githubUrl": "https://github.com/Roshh21/rl_traffic",
     "liveUrl": "",
-    "techStack": ["Multi-Agent RL (PPO)", "SUMO", "Python"],
+    "techStack": [
+      "Multi-Agent RL (PPO)",
+      "SUMO",
+      "Python"
+    ],
     "keyFeatures": [
       "PPO-based RL model that optimizes traffic signal timings using SUMO-simulated real-world traffic data",
       "Custom reward strategies that prioritize high-traffic lanes to reduce overall urban congestion"
@@ -224,37 +364,6 @@
     "lessonsLearned": [
       "Reward shaping mattered more than raw model capacity for this environment",
       "SUMO simulation fidelity was key to getting policies that would generalize"
-    ]
-  },
-  {
-    "id": "proj-arcflow",
-    "title": "ArcFlow",
-    "subtitle": "AI-driven branching narrative platform",
-    "tier": "secondary",
-    "status": "shipped",
-    "statusLabel": "",
-    "images": ["/projects/arcflow-1.jpg"],
-    "demoVideo": "",
-    "architectureDiagram": "",
-    "githubUrl": "https://github.com/Roshh21/ArcFlow",
-    "liveUrl": "",
-    "techStack": ["React", "FastAPI", "MongoDB", "Generative AI API"],
-    "keyFeatures": [
-      "AI-driven story platform with dynamic branching choices",
-      "Genre/mood-aware generative API integration for narrative progression",
-      "Secure per-user story history management"
-    ],
-    "results": [
-      "Fully dynamic branching narratives generated on the fly rather than pre-scripted",
-      "Persistent, isolated story history per user"
-    ],
-    "challenges": [
-      "Keeping generated narrative continuity coherent across branching choices",
-      "Designing a data model that supports per-user branching story state"
-    ],
-    "lessonsLearned": [
-      "Mood/genre conditioning noticeably improved narrative consistency",
-      "Clean separation between story-state storage and generation logic simplified branching"
     ]
   }
 ]

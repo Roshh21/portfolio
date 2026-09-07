@@ -2,51 +2,116 @@
   {
     "category": "Languages",
     "icon": "terminal",
-    "items": ["Java", "Python", "JavaScript", "TypeScript", "SQL", "C#"]
+    "items": [
+      "Java",
+      "Python",
+      "JavaScript",
+      "TypeScript",
+      "SQL"
+    ]
   },
   {
     "category": "Frontend",
     "icon": "code",
-    "items": ["React.js", "Next.js", "Streamlit"]
+    "items": [
+      "React.js",
+      "Next.js",
+      "Streamlit",
+      "three.js"
+    ]
   },
   {
     "category": "Backend & Real-Time",
     "icon": "server",
-    "items": ["Node.js", "FastAPI", "REST APIs", "WebSockets", "MCP"]
+    "items": [
+      "Node.js",
+      "FastAPI",
+      "REST APIs",
+      "WebSockets",
+      "MCP"
+    ]
   },
   {
     "category": "Databases & Storage",
     "icon": "database",
-    "items": ["PostgreSQL", "MongoDB", "Redis", "Azure Blob Storage", "Elasticsearch", "ChromaDB", "Qdrant"]
+    "items": [
+      "PostgreSQL",
+      "MongoDB",
+      "Redis",
+      "Azure Blob Storage",
+      "Elasticsearch",
+      "ChromaDB",
+      "Qdrant"
+    ]
   },
   {
     "category": "Cloud & DevOps",
     "icon": "cloud",
-    "items": ["Microsoft Azure", "AWS", "Docker", "CI/CD"]
+    "items": [
+      "Microsoft Azure",
+      "AWS",
+      "Docker",
+      "CI/CD"
+    ]
   },
   {
     "category": "AI / ML",
     "icon": "brain",
-    "items": ["PyTorch", "CNNs", "Transformers", "Deep Learning", "Reinforcement Learning", "PSD Analysis", "Signal Processing"]
+    "items": [
+      "PyTorch",
+      "CNNs",
+      "Transformers",
+      "Deep Learning",
+      "Reinforcement Learning",
+      "PSD Analysis",
+      "Signal Processing"
+    ]
   },
   {
     "category": "Generative AI",
     "icon": "sparkles",
-    "items": ["RAG", "Agentic RAG", "LangChain", "LangGraph", "HuggingFace", "Ollama", "LLM APIs", "Prompt Engineering", "Vector Embeddings"]
+    "items": [
+      "RAG",
+      "Agentic RAG",
+      "LangChain",
+      "LangGraph",
+      "HuggingFace",
+      "Ollama",
+      "LLM APIs",
+      "Prompt Engineering",
+      "Vector Embeddings"
+    ]
   },
   {
     "category": "Architecture & Systems",
     "icon": "layers",
-    "items": ["Client-Server Architecture", "Server-Authoritative Architecture", "Real-Time State Sync", "Distributed Systems", "Model-Agnostic LLM Architecture"]
+    "items": [
+      "Client-Server Architecture",
+      "Server-Authoritative Architecture",
+      "Real-Time State Sync",
+      "Distributed Systems",
+      "Model-Agnostic LLM Architecture"
+    ]
   },
   {
     "category": "Security",
     "icon": "shield",
-    "items": ["Authentication", "Authorization", "RBAC", "JWT"]
+    "items": [
+      "Authentication",
+      "Authorization",
+      "RBAC",
+      "JWT"
+    ]
   },
   {
     "category": "Tools",
     "icon": "wrench",
-    "items": ["Git", "GitHub", "Kibana", "SUMO", "Unity", "Postman"]
+    "items": [
+      "Git",
+      "GitHub",
+      "Kibana",
+      "SUMO",
+      "Postman"
+    ]
   }
 ]
